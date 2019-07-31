@@ -1,4 +1,4 @@
-# Coordinator Model
+# Maintainer Model
 
 ## Table of Contents
 
@@ -27,18 +27,18 @@ Maintainers take this responsibility for their specific component. Besides the
 maintenance they assure proper communication among developers that are working
 on the component.
 
-The Maintainer is understood to be the owner of a component and are basically the
-only ones that are permitted to make changes in a component. Decisions about
+The Maintainer is understood to be the owner of a component and is basically the
+only one that is permitted to make changes in it. Decisions about
 features in the component are made together with the product manager on the JF.
 This implies that mostly the maintainer is the only possible contractor for work
-on a component that should be included in the official ILIAS-core. The maintainer
+on a component that should be included in the official ILIAS-core. Maintainers
 may delegate the permission to make changes to other developers at their own
 discretion for specific parts of their component or even for the complete component.
 
 The PM and the TB appoint or replace maintainers. The maintainer role belongs to
 a person, not a company. Since the role builds on social capital in the community
-and a vision of the component, it will be near impossible to leave that role at
-a company when moving on.
+and a vision of the component, it will be near impossible to leave that role with
+a company when a maintainer moves on.
 
 It is encouraged that maintainers appoint second or even third maintainers for
 their respective components and introduce them to the inner workings of the
@@ -52,14 +52,14 @@ changes in or removal of an existing feature) are decided upon by the maintainer
 of a component together with the product manager on the Jour Fixe, according
 to the process to handle [feature requests](http://www.ilias.de/docu/goto.php?target=wiki_5307&client_id=docu#ilPageTocA119).
 
-Changes in the code of a component are privilege of the maintainer, which might
+Changes in the code of a component are the privilege of the maintainer, which might
 be delegated to other developers. Proposals for bugfixes or improvements of some
-component can be handed by contributors according to the [guidelines for contributions](contributing.md)
+component can be handed in by contributors according to the [guidelines for contributions](contributing.md)
 and are recognized by responsible maintainers.
 
 <a name="issue-management"></a>
 ## Issue Management
-Issues with components are handed in a the [Issue-Tracker](http://mantis.ilias.de).
+Issues with components are handed in through the [Issue-Tracker](http://mantis.ilias.de).
 They are assigned to the responsible maintainer automatically and are handled
 according to the [bug fixing process](https://docu.ilias.de/goto_docu_file_4566_download.html).
 
