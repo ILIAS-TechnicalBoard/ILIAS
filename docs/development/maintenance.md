@@ -1,39 +1,92 @@
-ILIAS Maintenance
-=================
-The development of the ILIAS source code is coordinated and maintained by a coordination team within the ILIAS network. Besides the main responsibilities for the project, several developers and users are maintaining certain modules of ILIAS.
+# Maintainer Model
 
-# Special Roles
+## Table of Contents
 
-* **Product Management**: [Matthias Kunkel]
-* **Technical Board**: [Alexander Killing], [Michael Jansen], [Timon Amstutz], [Richard Klees], [Stephan Winiker]
-* **Testcase Management**: [Fabian Kruse]
-* **Documentation**: [Florian Suittenpointner]
-* **Online Help**: [Alexandra Tödt]
-
-# Maintainers
-We highly appreciate to get new developers but we have to guarantee the sustainability and the quality of the ILIAS source code. The system is complex for new developers and they need to know the concepts of ILIAS that are described in the development guide.
- 
-Communication among developers that are working on a specific component needs to be assured. Final decision about getting write access to the ILIAS development system (Github) is handled by the product manager.
- 
-ILIAS is currently maintained by three types of Maintainerships:
-
-- First Component Maintainer
-- Second Component Maintainer
-- [Coordinator Model](maintenance-coordinator.md) 
- 
-The following rules must be respected for everyone involved in the programming of ILIAS for all components having a listed component maintainer (see bellow):
-
-1. Decisions on new features or feature removals are made by the responsible first maintainer and the product manager in the Jour Fixe meetings after an open discussion.
-2. All components have a first and second maintainer. Code changes are usually done by the first maintainer. The first maintainer may forward new implementations to the second maintainer.
-
-Responsibilities of a component maintainer:
-
-- Component maintainer must assure maintenance of their component for at least three years (approx. three ILIAS major releases).
-- Component maintainers must agree to coordinate the development of their component with the product manager.
-- Component maintainer are responsible for bug fixing of their component and get assigned related bugs automatically by the [Issue-Tracker](http://mantis.ilias.de).
+<!-- MarkdownTOC depth=0 autolink="true" bracket="round" autoanchor="true" style="ordered" indent="   " -->
+1. [Role of the Maintainer](#role-of-the-maintainer)
+1. [Change Management](#change-management)
+1. [Issue Management](#issue-management)
+1. [Scenarios](#scenarios)
+1. [What can be expected of a coordinator?](#expectations)
 
 
-The code base is deviced in several components:
+<!-- /MarkdownTOC -->
+<a name="role-of-the-maintainer"></a>
+## Role of the Maintainer
+
+Each component ([Module](../../Modules), [Service](../../Service), [Library](../../src)
+and some special cases as language-files) is either maintained by a maintainer
+or collectively maintained within the [Coordinator Model](maintenance-coordinator.md).
+
+New developers are welcome to the project, but the system has reached a certain
+complexity in code as well as in features that could be hard to grasp for newcomers.
+Even if we try to document our system better and simplify where possible, we still
+need to guarantee the sustainability and quality of our development process.
+
+Maintainers take this responsibility for their specific component. Besides the
+maintenance they assure proper communication among developers that are working
+on the component.
+
+The Maintainer is understood to be the owner of a component and is basically the
+only one that is permitted to make changes in it. Decisions about
+features in the component are made together with the product manager on the JF.
+This implies that mostly the maintainer is the only possible contractor for work
+on a component that should be included in the official ILIAS-core. Maintainers
+may delegate the permission to make changes to other developers at their own
+discretion for specific parts of their component or even for the complete component.
+
+The PM and the TB appoint or replace maintainers. The maintainer role belongs to
+a person, not a company. Since the role builds on social capital in the community
+and a vision of the component, it will be near impossible to leave that role with
+a company when a maintainer moves on.
+
+It is encouraged that maintainers appoint second or even third maintainers for
+their respective components and introduce them to the inner workings of the
+component to enhance the component's [Bus factor](https://en.wikipedia.org/wiki/Bus_factor).
+
+
+<a name="change-management"></a>
+## Change Management
+Changes of features of the component (be it introduction of a new feature,
+changes in or removal of an existing feature) are decided upon by the maintainer
+of a component together with the product manager on the Jour Fixe, according
+to the process to handle [feature requests](http://www.ilias.de/docu/goto.php?target=wiki_5307&client_id=docu#ilPageTocA119).
+
+Changes in the code of a component are the privilege of the maintainer, which might
+be delegated to other developers. Proposals for bugfixes or improvements of some
+component can be handed in by contributors according to the [guidelines for contributions](contributing.md)
+and are recognized by responsible maintainers.
+
+<a name="issue-management"></a>
+## Issue Management
+Issues with components are handed in through the [Issue-Tracker](http://mantis.ilias.de).
+They are assigned to the responsible maintainer automatically and are handled
+according to the [bug fixing process](https://docu.ilias.de/goto_docu_file_4566_download.html).
+
+<a name="scenarios"></a>
+## Scenarios
+
+TBD
+
+<a name="expectations"></a>
+## What can be expected of a maintainer?
+* Component maintainers MUST assure maintenance of their component for at least
+three year which is approximately three ILIAS major releases.
+* Component maintainers MUST agree to coordinate the development of their component
+with the product manager. The decisions on new features or the removal of existing
+features MUST be made by the responsible first maintainer and the product manager
+on the Jour Fixe after an open discussion.
+* Component maintainers SHOULD fix bugs in components they are responsible for.
+Tickets related to their component are automatically assigned by the [Issue-Tracker](http://mantis.ilias.de).
+* Component maintainers MUST handle PRs according to our [contribution guidelines](contributing.md#rules-for-maintainers-assigned-to-prs).
+
+TBD
+
+**Please note:** The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and  "OPTIONAL"  in this
+document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
+
+# Listing of Maintainers
 
 <!-- REMOVE -->
 * **ActiveRecord**
