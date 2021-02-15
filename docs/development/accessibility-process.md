@@ -5,6 +5,12 @@ users with special needs. This document clarifies how we want to move our softwa
 towards this goal incrementally, who is involved, which tools the community uses and
 how different activities are incorporated in our release cycle.
 
+**Table of Contents**
+* [Goals](#Goals)
+* [Participants](#Participants)
+* [Tools](#Tools)
+* [Activities in Release Cycle](#Activities in Release Cycle)
+
 ## Goals
 
 While the general goal is to provide a system that is usable to for everyone, that
@@ -46,6 +52,7 @@ participants. Roles central to the process are listed first.
     * provides feedback on feature requests before Jour Fixe.
     * take part in Jour Fixe to answers questions on issues and features
     * carries out annual review of this process 
+    * answers queries to the accessibility mailing-list
     * is responsible for this document
 
 * Maintainers and Developers
@@ -75,7 +82,7 @@ participants. Roles central to the process are listed first.
       bugs
 
 * Test Case Author for Accessibility
-    * prepares and organises test cases of the Accessibility Test Suite
+    * prepares, organises and writes test cases of the Accessibility Test Suite
     * Supports Community Tester for Accessibility, improves cases upon feedback
       from Community Tester or Developer
     * Analyses Accessibility Assessment Reports. Reviews Test Suite in the light
@@ -83,6 +90,7 @@ participants. Roles central to the process are listed first.
       bugs based on Accessibility Assessment Reports
     * Has sound understanding of accessibility and can be consulted by developers
       on bugs.
+    * Works in close coordination with/or is member of the UI/UX/A11y expert group.
 
 * Chair SIG Accessibility
     * Role requirements are described in [Rules of Procedure](https://docu.ilias.de/goto_docu_cat_3773.html)
@@ -162,7 +170,7 @@ use different tools. This section clarifies the purpose and usage of these tools
     * All KS-Entries are tested for the prioritized issues and using automatic
       tools.
 
-* Development Tools - suggested WAVE API
+* Development Tools
     * Detects issues very early on and drives home the importance of accessibility
       during development.
     * Reports are prepared with Continuous Integration and reported to Jour Fixe.
@@ -182,10 +190,55 @@ use different tools. This section clarifies the purpose and usage of these tools
 * [Jour Fixe](https://docu.ilias.de/goto.php?target=wiki_1357_Jour_Fixe_Agendas)
     * Maintainers can put forward their Accessibility issues that came up during
       implementation as "Development Issues".
+    * Can be contacted for resolving discussions/deciding on issues among different stakeholders on A11y questions.      
+
+* [UI Components](../..//src/UI/README.md)
+    * Lists UI Components of ILIAS along with a purpose description an A11y on specific UI Components.
+    * Can be used to lookup of the mechanism of specific parts of the UI.
 
 * Accessibility Mailing List
     * First POC for Maintainers
     * Maintainers, writers of Feature wiki articles can turn themselves to Acessibility
       Mailing List to get their issues looked at.
+    * The mailing list is managed by the UI/UX/A11y expert group
 
 ## Activities in Release Cycle
+To above goals are not achievable in a single step. They need to be tackled continuously in an iterative process aiming to push 
+closer towards achieving those goals with each iteration. This section shows how we understand our release cycle as one
+iteration in the process of enhancing A11y in ILIAS. The main responsibility for following those steps listed in this 
+cycle resides by the Technical Board supported by the SIG A11y and the A11y expert group.
+
+### Contracted External Beta Accessibility Assessment - November
+* Early in Beta phase a formative Accessibility Assessment is carried out by a registered auditor.
+* Those audits have the main goal of evaluate the A11y of a aspect of ILIAS (e.g. new Features, status of
+  a given service module or component or guidelines).
+* Those audits provide feedback on the quality of the tested aspect. 
+* Note, certification of any kind or generating lists for issue trackers are NOT goals of that assessment.
+* The Product Manager signs the contract with the registered auditor. The SIG may help in providing the funding.
+* ILIAS society provides test installation.
+
+### Huge Project Identification Jour Fixe / Yearly Project
+* During the Huge Project Identification Meeting we try to identify large UI heavy components to make sure accessibility 
+issues are addressed early and continuously. 
+* Huge UI heavy components may choose to contract external accessibility testing before merging.
+
+### After-Action Review Accessibility - March
+* After the release the A11y expert group organizes an After-Action Review.
+* Yearly meeting open to all community members.
+* After publishing the stable release, the former season is analysed with respect to accessibility.
+* Draws up plan for upcoming season.
+* The Main Question is, how well did our current process and guidelines hold water during this release?
+* Maintains and reviews accessibility guidelines according to on new guidelines from the WCAG or other major developments outside the ILIAS Community.
+* Triggers Test Case Author to adopt Test Suite.
+* Reviews processes and roles that manage accessibility
+
+### Feature Freeze - April
+* Features for Accessibility Improvements are to be handed in on time.
+* Features for Accessibility Improvements may be derived from the After-Action Review.
+
+### Feature Development 
+* Feature must adhere to accessibility guidelines
+* Maintainers carry out Accessibility Checklist (Todo, provide Link) during implementation
+
+### Community Testing - November
+* In Beta Phase the new release is specifically tested with regard to accessibility. 
