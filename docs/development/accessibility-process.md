@@ -10,6 +10,7 @@ how different activities are incorporated in our release cycle.
 * [Participants](#participants)
 * [Tools](#tools)
 * [Activities in Release Cycle](#activities)
+* [Future Development](#future-development)
 
 <a name="goals"></a>
 ## Goals
@@ -55,7 +56,8 @@ participants. Roles central to the process are listed first.
     * provides feedback on feature requests before Jour Fixe
     * sends member to take part in Jour Fixe to answers questions on issues and features
     * carries out an annual review of this process 
-    * answers queries to the accessibility mailing-list
+    * provides a point of contact for inquiries regarding user interface, user experience
+      and accessibility
     * is responsible for this document
 
 * [Maintainers and Developers](../development/maintenance.md)
@@ -78,21 +80,18 @@ participants. Roles central to the process are listed first.
       automate a part of testing
     * provides feedback on quality and coverage of the accessibility test suite to the
       Test Case Author for Accessibility 
-    * analyses the the reports of the External Beta Accessibility Assessment and
-      prepares issue reports based on the report and our accessibility guidelines
-    * has a sound understanding of accessibility and can be consulted by developers on
-      accessibility issues
 
 * Test Case Author for Accessibility
     * prepares, organises and writes test cases of the Accessibility Test Suite
+      according to rules in KS-entries, FW-entries and objectively testable
+      requirements in accessibility guidelines
     * supports Community Tester for Accessibility, improves cases upon feedback
       from community tester or developer
     * analyses Accessibility Assessment Reports. Reviews Test Suite in the light
-      of said report and makes changes accordingly. Supports Community in preparing
-      tickets based on Accessibility Assessment Reports
-    * has sound understanding of accessibility and can be consulted by developers
-      on accessibility issue
-    * works in close coordination with/or is member of the UI/UX/A11y expert group
+      of said report and makes changes accordingly
+    * has sound understanding of accessibility
+    * is recruited and appointed by the UI/UX/A11y expert group
+    * works in close coordination with or is member of the UI/UX/A11y expert group
 
 * [Chair SIG Accessibility](https://docu.ilias.de/goto_docu_grp_6949.html)
     * Role requirements are described in [Rules of Procedure](https://docu.ilias.de/goto_docu_cat_3773.html)
@@ -130,6 +129,8 @@ To support the work in the various stages of the release cycle the community
 uses different tools. This section clarifies the purpose and usage of these tools.
 
 * [Accessibility Guidelines](./accessibility.md)
+    * The Accessibility Guidelines inform the development of new features, KS-entries
+      etc. and determine potential improvements of existing features, KS-entries etc.
     * The Accessibility Guidelines are based on the WCAG and put these guidelines
       in the context of ILIAS. The guidelines are supplemented with:
         * specific rules in KS entries which interpret guidelines for UI-elements
@@ -148,17 +149,18 @@ uses different tools. This section clarifies the purpose and usage of these tool
       accessibility of their ongoing implementation projects.
 
 * [Feature Wiki](https://docu.ilias.de/goto_docu_wiki_wpage_1_1357.html)
-    * For Feature Requests a dedicated section "Accessibility" is to be filled
-      out by the maintainer
-    * The Maintainer has to state if the feature implements a behaviour that is
-      neither covered by an existing UI-Component nor complies with the Accessibility
-      Guideline. If this is the case the maintainer has to consult with the UI/UX/A11y
-      expert group. The UI/UX/A11y expert group then provides a risk analysis of
-      features in the Feature Wiki and recommends an accessible approach. If the
-      maintainer is unsure about the accessibility issues of a feature, the
-      maintainer may turn to the Accessibility Mailing List.
-    * The "Accessibility" section is to be completed before the article can be
-      finally decided upon by the Jour Fixe.
+    * The Maintainer has to fill in the section "Accessibility Implications" and
+      complete it before the article can be finally decided on the Jour Fixe.
+      He may contact the UI/UX/A11y Expert Group for support.
+    * The UI/UX/A11y Expert Group reviews Feature Wiki entries at their own discretion
+      and provides feedback about potential issues as early as possible in the design
+      of new features.
+    * The section "Accessibility Implications" is located in the section "User
+      Interface Modifications" and contains this text: "If the proposal contains
+      potential accessibility issues that are neither covered by existing UI
+      components nor clarified by guidelines, please list them here. For every
+      potential issue please either propose a solution or write down a short risk
+      assessment about potential fallout if there would be no solution for the issue."
 
 * [Testrail](https://testrail.ilias.de)
     * A [test suite dedicated to Accessibility](https://testrail.ilias.de/index.php?/runs/view/566&group_by=cases:section_id&group_order=asc)
@@ -168,15 +170,8 @@ uses different tools. This section clarifies the purpose and usage of these tool
       consumers to look up and self-educate.
     * Test Cases are provided that use simple diagnostical browser extensions like
       lighthouse, HTML Validator or Wave browser extension.
-    * All KS-Entries are tested for the prioritized issues and using automatic
-      tools.
-
-* Development Tools
-    * Detect issues very early on and drives home the importance of accessibility
-      during development.
-    * Reports are prepared with Continuous Integration and reported to Jour Fixe.
-    * All developers are encouraged to make use of simple diagnostical browser
-      extensions like lighthouse, HTML Validator or Wave browser extension
+    * All KS-Entries are tested to make sure they comply with their stated
+      accessibility rules and the Accessibility Guidelines.
 
 * [Issue Tracker](https://mantis.ilias.de)
     * Issues can be reported on automatically testable violations of guidelines.
@@ -195,15 +190,9 @@ uses different tools. This section clarifies the purpose and usage of these tool
       among different stakeholders on accessibility questions.
 
 * [UI Components](../..//src/UI/README.md)
-    * lists UI Components of ILIAS along with a purpose description an accessibility on
-      specific UI Components
-    * can be used to lookup of the mechanism of specific parts of the UI
-
-* Accessibility Mailing List
-    * First POC for Maintainers
-    * Maintainers, writers of Feature wiki articles can turn themselves to Acessibility
-      Mailing List to get their issues looked at.
-    * The mailing list is managed by the UI/UX/A11y expert group
+    * The documentation of UI Components encompases a section on accessibility rules.
+    * The documentation can be used to lookup of the mechanism of specific parts of
+      the UI
 
 
 <a name="activities"></a>
@@ -261,3 +250,34 @@ implementation
 
 ### Community Testing - November
 * In Beta Phase the new release is specifically tested with regard to accessibility.
+
+
+<a name="future-development"></a>
+## Future Development
+
+There are some developments we expect, or at least hope, to happen sometime soon.
+Since these things are not there yet, we list them in this separate section.
+Please make sure to understand, that these things are no promisses. Their implementation
+heavily relies on resources from the community, where labor is even scarcer and
+more important than funding. If you want to see some of these things implemented,
+consider offering your resources to the [Technical Board](mailto:tb@ilias.de) for
+further advice:
+
+* Development Tools in CI
+    * detect issues very early on and highlight the importance of accessibility
+      during development.
+    * Reports are prepared with Continuous Integration and reported to Jour Fixe.
+
+* Documentation of local Development Tools
+    * All developers are encouraged to make use of simple diagnostical browser
+      extensions like lighthouse, HTML Validator or Wave browser extension
+    * A document as a common entry point to our accessibility tooling for new
+      developers and designers exists.
+    * IILIAS developers and designers can readily use accessibility tooling on
+      their local machines by help of the documentation.
+
+* Forum as Point of Contact
+    * Inquiries regarding user interface, user experience and accessibility can
+      be made via this forum to the UI/UX/A11y Expert Group.
+    * The results to this inquiries are public.
+    * The Point of Contact is unified with the already existing UI-clinic.
