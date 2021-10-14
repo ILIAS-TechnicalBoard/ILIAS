@@ -73,13 +73,16 @@ focus on code quality, a low amount of bugs should be expected.
 
 <a name="scenarios"></a>
 ## Scenarios
-This maintainance model is suited for components that have the potential 
-to grow too large to be handled by one single developer and therefore highly 
-benefit from contributions among different developers and even service providers. 
-It is further important that the component is of modular structure with different 
-parts following a similar scheme. It is especially suited, if some component is 
-of a critical importance for many other components, since it is designed to allow 
-a collaborative development of the vision for such a key aspect.
+This maintainance model is suited for components that fit one or more of the following criteria:
+* The component is important for the functioning of other components or for ILIAS as a whole. 
+In this case the coordinator model helps improve the bus factor.
+* The component is used by other components. In this case the component profits from the coordinator 
+model as it is designed to allow a collaborative development of the vision and the code.
+* The component has the potential to grow too large to be handled by one single developer
+ and therefore benefits a lot from contributions by different developers maybe even linked to
+ different service providers. 
+* The component has a modular structure with different parts following a similar scheme. This type of
+component makes it especially easy for multiple contributes to provide parts of it.
 
 <a name="expectations"></a>
 ## What can be expected of a coordinator?
