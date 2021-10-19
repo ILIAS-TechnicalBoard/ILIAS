@@ -82,7 +82,7 @@ model as it is designed to allow a collaborative development of the vision and t
  and therefore benefits a lot from contributions by different developers maybe even linked to
  different service providers. 
 * The component has a modular structure with different parts following a similar scheme. This type of
-component makes it especially easy for multiple contributes to provide parts of it.
+component makes it especially easy for multiple contributers to provide parts of it.
 
 <a name="expectations"></a>
 ## What can be expected of a coordinator?
