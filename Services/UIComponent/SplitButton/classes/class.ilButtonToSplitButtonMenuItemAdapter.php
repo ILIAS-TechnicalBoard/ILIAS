@@ -16,6 +16,8 @@
 /**
  * Class ilButtonToSplitButtonMenuItemAdapter
  * @author Michael Jansen <mjansen@databay.de>
+ *
+ * @deprecated 10
  */
 class ilButtonToSplitButtonMenuItemAdapter implements ilSplitButtonMenuItem
 {

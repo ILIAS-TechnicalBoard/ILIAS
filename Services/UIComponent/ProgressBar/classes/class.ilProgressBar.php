@@ -16,6 +16,8 @@
 /**
  * Progress bar GUI
  * @author Jörg Lützenkirchen <luetzenkirchen@leifos.com>
+ *
+ * @deprecated 10
  */
 class ilProgressBar
 {
