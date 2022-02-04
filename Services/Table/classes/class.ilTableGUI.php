@@ -17,6 +17,8 @@
 /**
  * HTML table component
  * @author	Sascha Hofmann <shofmann@databay.de>
+ * 
+ * @deprecated 10
  */
 class ilTableGUI
 {
@@ -51,7 +53,7 @@ class ilTableGUI
     public string $footer_previous = "";		// value of previous link
     public string $footer_next = "";			// value of next link
     public bool $lang_support = true;	// if a lang object is included
-    public bool $global_tpl = false;			// uses global tpl (true) or a local one (false)
+    public bool $global_tpl = false;			// uses global tpl (true) @deprecated 10or a local one (false)
     public string $form_name = "";			// the name of the parent form of the table
     public string $select_all_checkbox = "";  // the name (or the first characters if unique) of a checkbox the should be toggled with a select all button
     public array $action_buttons = [];  // action buttons in the table footer
