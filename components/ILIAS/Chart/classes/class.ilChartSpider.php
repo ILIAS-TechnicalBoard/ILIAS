@@ -16,6 +16,7 @@
 /**
  * Generator for spider charts
  * @author Jörg Lützenkirchen <luetzenkirchen@leifos.com>
+ * @deprecated 10 This component will be removed with ILIAS 10
  */
 class ilChartSpider extends ilChart
 {

@@ -16,6 +16,7 @@
 /**
  * Generator for pie charts
  * @author Jörg Lützenkirchen <luetzenkirchen@leifos.com>
+ * @deprecated 10 This component will be removed with ILIAS 10
  */
 class ilChartPie extends ilChart
 {
