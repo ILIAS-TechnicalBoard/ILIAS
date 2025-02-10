@@ -18,30 +18,24 @@ declare(strict_types=1);
  *
  *********************************************************************/
 
-namespace ILIAS\Block;
+namespace ILIAS\Container\Block;
 
 /**
+ * Block data service
  * @author Alexander Killing <killing@leifos.de>
  */
-class BlockManager
+class InternalDataService
 {
-    protected BlockSessionRepository $repo;
+    // protected ...\DataFactory ..._factory;
 
-    public function __construct(BlockSessionRepository $repo)
+    public function __construct()
     {
-        $this->repo = $repo;
+        //$this->..._factory = new ...\DataFactory();
     }
 
-    public function setNavPar(
-        string $par,
-        string $val
-    ): void {
-        $this->repo->setNavPar($par, $val);
-    }
-
-    public function getNavPar(
-        string $par
-    ): string {
-        return $this->repo->getNavPar($par);
-    }
+    /*
+    public function ...() : ...\...
+    {
+        return $this->..._factory->...();
+    }*/
 }

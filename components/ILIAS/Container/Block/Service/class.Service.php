@@ -18,33 +18,27 @@ declare(strict_types=1);
  *
  *********************************************************************/
 
-namespace ILIAS\Block;
+namespace ILIAS\Container\Block;
+
+use ILIAS\DI\Container;
 
 /**
- * Stores repository clipboard data
- *
  * @author Alexander Killing <killing@leifos.de>
  */
-class BlockSessionRepository
+class Service
 {
-    public const KEY_BASE = "block_";
+    protected Container $DIC;
 
-    public function __construct()
+    public function __construct(Container $DIC)
     {
+        $this->DIC = $DIC;
     }
 
-    public function setNavPar(
-        string $par,
-        string $val
-    ): void {
-        \ilSession::set(self::KEY_BASE . $par, $val);
-    }
-
-    public function getNavPar(string $par): string
+    /**
+     * Internal service, do not use in other components
+     */
+    public function internal(): InternalService
     {
-        if (\ilSession::has(self::KEY_BASE . $par)) {
-            return \ilSession::get(self::KEY_BASE . $par);
-        }
-        return "";
+        return new InternalService($this->DIC);
     }
 }

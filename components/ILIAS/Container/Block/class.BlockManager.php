@@ -18,27 +18,30 @@ declare(strict_types=1);
  *
  *********************************************************************/
 
-namespace ILIAS\Block;
-
-use ILIAS\DI\Container;
+namespace ILIAS\Container\Block;
 
 /**
  * @author Alexander Killing <killing@leifos.de>
  */
-class Service
+class BlockManager
 {
-    protected Container $DIC;
+    protected BlockSessionRepository $repo;
 
-    public function __construct(Container $DIC)
+    public function __construct(BlockSessionRepository $repo)
     {
-        $this->DIC = $DIC;
+        $this->repo = $repo;
     }
 
-    /**
-     * Internal service, do not use in other components
-     */
-    public function internal(): InternalService
-    {
-        return new InternalService($this->DIC);
+    public function setNavPar(
+        string $par,
+        string $val
+    ): void {
+        $this->repo->setNavPar($par, $val);
+    }
+
+    public function getNavPar(
+        string $par
+    ): string {
+        return $this->repo->getNavPar($par);
     }
 }
