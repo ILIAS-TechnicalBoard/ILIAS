@@ -18,6 +18,6 @@
  *
  * @author Michael Jansen <mjansen@databay.de>
  */
-class ilAdvancedEditingRequiredTagsException extends ilAdvancedEditingException
+class ilAdvancedEditingRequiredTagsException extends ilException
 {
 }
