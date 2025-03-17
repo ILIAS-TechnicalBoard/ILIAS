@@ -68,6 +68,17 @@ the release.
 
 [//]: # (END Fixing)
 
+## Dependabot PRs
+[//]: # (BEGIN Dependabot)
+Github's Dependabot will provide PRs for known issues in dependencies included
+in ILIAS. The maintainer who proposed the corresponding dependency MUST react to
+the PRs within 14 days. The Technical Board will remind maintainers  about PRs
+by Dependabot that are older than 14 days during their biweekly meeting. How well
+a dependency is taken care of is a factor at the yearly review of the dependencies.
+
+[//]: # (END Dependabot)
+
+
 ## Security Update Notifications
 [//]: # (BEGIN Notifications)
 
